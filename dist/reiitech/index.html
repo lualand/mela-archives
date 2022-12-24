@@ -88,7 +88,7 @@
       (function(){if(/localhost/.test(location.host)||!window.fetch)return!1;fetch("/manifest.json").then(t=>{const s=t.headers.get("Content-Type");if(/text\/html/.test(s))return!1;t.json().then(n=>{Object.keys(n).map(c=>{n[c].assets.forEach(o=>{if(/\.(jpg|png|svg)$/.test(o)){const e=document.createElement("link");e.href=`/${o}`,e.rel="preload",e.as="image",document.head.appendChild(e)}})})}).catch(console.error)}).catch(console.error)})();
     </script>
     <script type="module" crossorigin src="/assets/index.46cfa653.js"></script>
-    <link rel="stylesheet" href="/assets/index.bde5ff54.css">
+    <link rel="stylesheet" href="/assets/index.bde5ff54.css" />
   </head>
   <body>
     <div id="app"></div>
@@ -100,6 +100,5 @@
         <div class="sk-cube sk-cube3"></div>
       </div>
     </div>
-
   </body>
 </html>
