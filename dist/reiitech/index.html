@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <title>REIITECH</title>
+    <style>
+      /*! https://unpkg.com/browse/spinkit@2.0.1/spinkit.css */
+      .sk-folding-cube {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        transform: rotateZ(45deg);
+      }
+      .sk-folding-cube .sk-cube {
+        float: left;
+        width: 50%;
+        height: 50%;
+        position: relative;
+        transform: scale(1.1);
+      }
+      .sk-folding-cube .sk-cube:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #edf2f7;
+        animation: sk-foldCubeAngle 2.4s infinite linear both;
+        transform-origin: 100% 100%;
+      }
+      .sk-folding-cube .sk-cube2 {
+        transform: scale(1.1) rotateZ(90deg);
+      }
+      .sk-folding-cube .sk-cube3 {
+        transform: scale(1.1) rotateZ(180deg);
+      }
+      .sk-folding-cube .sk-cube4 {
+        transform: scale(1.1) rotateZ(270deg);
+      }
+      .sk-folding-cube .sk-cube2:before {
+        animation-delay: 0.3s;
+      }
+      .sk-folding-cube .sk-cube3:before {
+        animation-delay: 0.6s;
+      }
+      .sk-folding-cube .sk-cube4:before {
+        animation-delay: 0.9s;
+      }
+      @keyframes sk-foldCubeAngle {
+        0%,
+        10% {
+          transform: perspective(140px) rotateX(-180deg);
+          opacity: 0;
+        }
+        25%,
+        75% {
+          transform: perspective(140px) rotateX(0deg);
+          opacity: 1;
+        }
+        90%,
+        to {
+          transform: perspective(140px) rotateY(180deg);
+          opacity: 0;
+        }
+      }
+    </style>
+    <style>
+      body {
+        margin: 0;
+        background-color: #f5f3f2;
+      }
+      #app-spin {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-color: #503733;
+      }
+      #app-spin.hidden {
+        display: none;
+      }
+    </style>
+    <script>
+      // prettier-ignore
+      (function(){if(/localhost/.test(location.host)||!window.fetch)return!1;fetch("/manifest.json").then(t=>{const s=t.headers.get("Content-Type");if(/text\/html/.test(s))return!1;t.json().then(n=>{Object.keys(n).map(c=>{n[c].assets.forEach(o=>{if(/\.(jpg|png|svg)$/.test(o)){const e=document.createElement("link");e.href=`/${o}`,e.rel="preload",e.as="image",document.head.appendChild(e)}})})}).catch(console.error)}).catch(console.error)})();
+    </script>
+    <script type="module" crossorigin src="/assets/index.46cfa653.js"></script>
+    <link rel="stylesheet" href="/assets/index.bde5ff54.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="app-spin">
+      <div class="sk-folding-cube">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube3"></div>
+      </div>
+    </div>
+  </body>
+</html>
